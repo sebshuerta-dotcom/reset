@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+    <h1 id="title">Change your condition</h1>
+
+    <button id="resetButton">Give me an action</button>
+
+    <p id="actionDisplay"></p>
+
+    <script>
+
+        function chooseAction() {
+            const actions = [
+                "Play 20 min of brick",
+                "Spend 10 min with Abi",
+                "meditate 10 mins",
+                "cold water on face 10 pushups",
+                "10 Hail Marys"
+            ];
+
+            const randomNumber = Math.floor(Math.random() * actions.length);
+
+            const chosenAction = actions[randomNumber];
+
+            document.getElementById("actionDisplay").textContent = chosenAction;
+        }
+
+        document.getElementById("resetButton").addEventListener("click", chooseAction);
+
+    </script>
+
+</body>
+
+</html>
